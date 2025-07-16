@@ -89,6 +89,15 @@ window.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Enter') e.preventDefault();
     });
   });
+  // Auto-format warranty date fields as dd/mm/yyyy
+  document.addEventListener('input', function(e) {
+    if (e.target.name === 'warrantyDate[]') {
+      let v = e.target.value.replace(/[^\d]/g, '').slice(0,8);
+      if (v.length >= 5) v = v.slice(0,2) + '/' + v.slice(2,4) + '/' + v.slice(4);
+      else if (v.length >= 3) v = v.slice(0,2) + '/' + v.slice(2);
+      e.target.value = v;
+    }
+  });
   document.querySelector('.add-btn').addEventListener('click', function(event) {
     event.preventDefault();
     const serialInputs = document.querySelectorAll('input[name="serialNo[]"]');
