@@ -1,0 +1,11 @@
+body {
+    /* font-family: 'Trebuchet MS', sans-serif; */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f6f7f9; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}

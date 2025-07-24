@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="loginscript.js" defer></script>
+</head>
+<body>
+    <div>
+        <img src="./icon.svg" alt="Logo" class="image">
+    </div>
+    <div class="container">
+        <div class="login-section">
+            <div class="login-form-container">
+                <h1 style="color: #1a3c34;">Welcome Back!</h1>
+                <p style="color: #1a3c34;">Please enter your login credentials.</p>
+                <!-- <p class="mandatory-fields">Fields marked with (*) are mandatory</p> -->
+                <div class="input-group">
+                    <input type="email" placeholder="Email Address *" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password *" required>
+                    <button class="password-toggle" type="button">
+                    <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                    <p class="forgot-password"><a href="../Forgot Password/forgotpassword.html">Forgot password?</a></p>
+                    <!-- <a href="#" class="forgot-password"></a> -->
+                    <button class="login-button"><b>LOGIN</b></button>
+                    <p class="signup-link">Don't have an account? <a href="../Sign-up/signup.html">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
