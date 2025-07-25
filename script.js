@@ -27,3 +27,35 @@ links.forEach(link => {
     }
   });
 });
+
+// Burger menu toggle
+const burger = document.getElementById('burger-menu');
+const mobileNav = document.getElementById('mobile-nav');
+
+if (burger && mobileNav) {
+  burger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    document.body.classList.toggle('mobile-nav-open');
+    burger.classList.toggle('active'); // Burger animation
+  });
+  // Close menu when clicking a link
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      document.body.classList.remove('mobile-nav-open');
+      burger.classList.remove('active');
+    });
+  });
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      mobileNav.classList.contains('active') &&
+      !mobileNav.contains(e.target) &&
+      !burger.contains(e.target)
+    ) {
+      mobileNav.classList.remove('active');
+      document.body.classList.remove('mobile-nav-open');
+      burger.classList.remove('active');
+    }
+  });
+}
