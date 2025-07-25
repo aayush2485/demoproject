@@ -143,6 +143,7 @@ body {
   color: #1a7f5a;
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
+  margin-top: 10px;
 }
 .feature-card p {
   color: #444;
@@ -230,7 +231,9 @@ body {
   margin: 0 auto;
   border-top: 1px solid #244c3c;
   padding-top: 1rem;
-  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
 }
 .footer-socials a {
   color: #b6f09c;
@@ -252,108 +255,6 @@ body {
 .revealed {
   opacity: 1;
   transform: none;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .contact-map {
-    width: 350px;
-    height: 220px;
-  }
-  .contact-info-flex {
-    min-width: 220px;
-    max-width: 350px;
-  }
-}
-@media (max-width: 900px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-map-details {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  .contact-info-flex {
-    align-items: center;
-    text-align: center;
-  }
-  .contact-columns {
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: center;
-  }
-  .feature-card {
-    min-width: 85vw;
-    max-width: 85vw;
-    padding: 1.2rem 0.7rem;
-    max-height: 15vw;
-    min-height: 15vw;
-  }
-}
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
-    padding: 1rem 2vw;
-  }
-  .feature-card {
-    min-width: 85vw;
-    max-width: 85vw;
-    padding: 1.2rem 0.7rem;
-    max-height: 30vw;
-    min-height: 30vw;
-  }
-  .logo {
-    order: 1;
-    margin-right: auto;
-  }
-  .burger {
-    order: 2;
-    margin-left: auto;
-  }
-  .nav-links, .nav-actions {
-    display: none !important;
-  }
-  .mobile-nav.active {
-    display: flex;
-  }
-  body.mobile-nav-open {
-    overflow: hidden;
-  }
-  .mobile-nav .login-btn,
-  .mobile-nav .cta-btn {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0;
-    text-align: center;
-    font-size: 1.1rem;
-    border-radius: 28px;
-    box-sizing: border-box;
-  }
-  .mobile-nav .login-btn {
-    background: none;
-    border: 2px solid #1a7f5a;
-    color: #1a7f5a;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  .mobile-nav .cta-btn {
-    background: #1a7f5a;
-    color: #fff;
-    border: none;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
 }
 
 /* Burger menu styles */
@@ -423,9 +324,67 @@ body {
   border-bottom: none;
 }
 
-/* Show burger and mobile nav on small screens */
+/* Responsive */
+@media (max-width: 1100px) {
+  .contact-map {
+    width: 350px;
+    height: 220px;
+  }
+  .contact-info-flex {
+    min-width: 220px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 900px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-map-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contact-info-flex {
+    align-items: center;
+    text-align: center;
+  }
+  .contact-columns {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .feature-card {
+    min-width: 85vw;
+    max-width: 85vw;
+    padding: 1.2rem 0.7rem;
+    max-height: 15vw;
+    min-height: 15vw;
+  }
+}
+
 @media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 1rem 2vw;
+  }
+  .feature-card {
+    min-width: 85vw;
+    max-width: 85vw;
+    padding: 1.2rem 0.7rem;
+    max-height: 30vw;
+    min-height: 30vw;
+  }
+  .logo {
+    order: 1;
+    margin-right: auto;
+  }
   .burger {
+    order: 2;
+    margin-left: auto;
     display: flex;
   }
   .nav-links, .nav-actions {
@@ -433,8 +392,38 @@ body {
   }
   .mobile-nav.active {
     display: flex;
+    align-items: center;
+    width: 180px;
+    gap: 4px;
   }
   body.mobile-nav-open {
     overflow: hidden;
+  }
+  .mobile-nav .login-btn,
+  .mobile-nav .cta-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 28px;
+    box-sizing: border-box;
+  }
+  .mobile-nav .login-btn {
+    background: none;
+    border: 2px solid #1a7f5a;
+    color: #1a7f5a;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .mobile-nav .cta-btn {
+    background: #1a7f5a;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .feature-card h3 {
+    margin-top: 5px;
   }
 }
