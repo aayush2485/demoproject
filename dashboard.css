@@ -17,7 +17,7 @@ body {
     background: #1a3c34;
     color: #fff;
     width: 240px;
-    padding: 2rem 1.5rem;
+    padding: 1rem 0.75rem;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 0 12px rgba(30,40,60,0.08);
@@ -57,11 +57,12 @@ body {
     background: #b6f09c;
     color: #1a3c34;
     opacity: 1;
+    font-weight: bold;
 }
 
 .main-content {
     flex: 1;
-    padding: 2.5rem 3rem;
+    padding: 1rem 2rem;
     background: transparent;
     display: flex;
     flex-direction: column;
@@ -91,10 +92,11 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid #b6f09c;
+    border: 3px solid #1a3c34;
     box-shadow: 0 2px 8px rgba(30,40,60,0.10);
     margin-right: -11px;
     margin-top: -19px;
+    cursor: pointer;
 }
 
 .dashboard-cards {
@@ -107,7 +109,7 @@ body {
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(30,40,60,0.06);
-    padding: 2rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     min-height: 180px;
@@ -121,7 +123,7 @@ body {
 
 .tasks-card ul {
     padding: 0;
-    margin: 1rem 0 0 0;
+    margin: -15px 0 0 0;
     list-style: none;
 }
 
@@ -141,8 +143,7 @@ body {
 
 .stats {
     display: flex;
-    justify-content: space-between;
-    margin-top: 1.2rem;
+    justify-content: space-around;
 }
 
 .stat-number {
@@ -168,14 +169,14 @@ body {
     justify-content: center;
     color: #bbb;
     font-size: 1.1rem;
-    margin-top: 1.2rem;
+    margin-bottom: 1.0rem;
     border: 1.5px dashed #b6f09c;
 }
 
 .quote-card blockquote {
     font-style: italic;
     color: #1a7f5a;
-    margin: 1.2rem 0 0 0;
+    margin: 0.25rem 0 0 0;
     font-size: 1.1rem;
     border-left: 4px solid #b6f09c;
     padding-left: 1rem;
@@ -301,15 +302,5 @@ body {
     .greeting h1 {
         font-size: 25px;
         text-align: left;
-    }
-    .card {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(30,40,60,0.06);
-    padding: 0.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 180px;
-    transition: transform 0.15s, box-shadow 0.15s;
     }
 }

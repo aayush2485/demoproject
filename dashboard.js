@@ -52,4 +52,57 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.setAttribute('aria-expanded', 'false');
         });
     }
+
+    // SPA navigation logic
+    const mainContentArea = document.getElementById('main-content-area');
+    const dashboardCardsHTML = mainContentArea ? mainContentArea.innerHTML : '';
+    const tasksLink = document.getElementById('tasks-link');
+    const statsLink = document.getElementById('stats-link');
+    const settingsLink = document.getElementById('settings-link');
+    const dashboardLink = document.querySelector('a.active');
+    if (tasksLink && mainContentArea) {
+        tasksLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('tasks.html')
+                .then(res => res.text())
+                .then(html => {
+                    mainContentArea.innerHTML = html;
+                });
+            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
+            tasksLink.classList.add('active');
+        });
+    }
+    if (statsLink && mainContentArea) {
+        statsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('stats.html')
+                .then(res => res.text())
+                .then(html => {
+                    mainContentArea.innerHTML = html;
+                });
+            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
+            statsLink.classList.add('active');
+        });
+    }
+    if (settingsLink && mainContentArea) {
+        settingsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('settings.html')
+                .then(res => res.text())
+                .then(html => {
+                    mainContentArea.innerHTML = html;
+                });
+            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
+            settingsLink.classList.add('active');
+        });
+    }
+    if (dashboardLink && mainContentArea) {
+        dashboardLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            mainContentArea.innerHTML = dashboardCardsHTML;
+            // Update active class
+            document.querySelectorAll('.sidebar nav ul li a').forEach(a => a.classList.remove('active'));
+            dashboardLink.classList.add('active');
+        });
+    }
 });
